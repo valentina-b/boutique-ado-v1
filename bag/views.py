@@ -33,10 +33,10 @@ def add_to_bag(request, item_id):
 
     request.session['bag'] = bag
     return redirect(redirect_url)
-
+    
 
 def adjust_bag(request, item_id):
-    """ Add the quantity of the specified product to the specified amount """
+    """Adjust the quantity of the specified product to the specified amount"""
 
     quantity = int(request.POST.get('quantity'))
     size = None
@@ -62,7 +62,7 @@ def adjust_bag(request, item_id):
 
 
 def remove_from_bag(request, item_id):
-    """ Remove the item from shopping bag """
+    """Remove the item from the shopping bag"""
 
     try:
         size = None
